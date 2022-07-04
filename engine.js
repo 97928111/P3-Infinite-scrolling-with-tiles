@@ -25,7 +25,7 @@ function setup() {
   label.html("World key: ");
   label.parent("container");
 
-  let input = createInput("cm147");
+  let input = createInput("Welcome to the Hell");
   input.parent(label);
   input.input(() => {
     rebuildWorld(input.value());
@@ -55,16 +55,16 @@ function cameraToWorldOffset([camera_x, camera_y]) {
 function draw() {
   // Keyboard controls!
   if (keyIsDown(LEFT_ARROW)) {
-    camera_velocity.x -= 1;
+    camera_velocity.x -= 0.5;
   }
   if (keyIsDown(RIGHT_ARROW)) {
-    camera_velocity.x += 1;
+    camera_velocity.x += 0.5;
   }
   if (keyIsDown(DOWN_ARROW)) {
-    camera_velocity.y += 1;
+    camera_velocity.y += 0.5;
   }
   if (keyIsDown(UP_ARROW)) {
-    camera_velocity.y -= 1;
+    camera_velocity.y -= 0.5;
   }
 
   let camera_delta = new p5.Vector(0, 0);
